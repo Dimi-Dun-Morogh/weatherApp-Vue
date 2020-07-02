@@ -46,6 +46,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+.wrap {
+  max-width: 960px;
+}
 .el-card {
   background-color: #fcfcfc !important;
 }

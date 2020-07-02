@@ -1,16 +1,16 @@
 <template>
   <div>
-    <el-card class="box-card">
+    <el-card class="box-card" shadow="never">
       <div slot="header">
         {{ dayOfTheWeek }}
         <span>{{ monthDayNumb }}</span>
       </div>
-      <span>
+      <span class="img-block">
         <el-tooltip :content="iconTooltip" placement="left-start">
           <img :src="weatherIcon" alt="icon" />
         </el-tooltip>
       </span>
-      <div>
+      <div class="card-foot">
         <span>{{ weatherTemp }}</span>
         <span> {{ weatherInfo }} </span>
       </div>
@@ -83,5 +83,20 @@ export default {
 }
 span {
   display: block;
+}
+.img-block {
+  background-color: rgba(22, 13, 12, 0.1);
+}
+.box-card >>> .el-card__header {
+  background-color: #2d40dc;
+  color: #fff;
+}
+.box-card >>> .el-card__body {
+  padding: 0;
+}
+.card-foot {
+  background-color: rgb(6, 65, 37);
+  padding: 10px;
+  color: floralwhite;
 }
 </style>

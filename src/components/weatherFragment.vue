@@ -1,14 +1,17 @@
 <template>
   <div>
     <el-card class="box-card">
-      <span>{{ fragment.time }}</span>
+      <span class="top">{{ fragment.time }}</span>
       <span>
         <el-tooltip :content="iconTooltip" placement="left-start">
           <img :src="weatherIcon" alt="icon" />
         </el-tooltip>
       </span>
-      <span>{{ weatherDegree }}</span>
-      <span>{{ iconTooltip }}</span>
+      <div class="bottom">
+        <span>{{ weatherDegree }}</span>
+        <span>{{ iconTooltip }}</span>
+      </div>
+
       <!-- <ul>
         <li>Temperature: {{ fragment.main.temp }}</li>
         <li>Feels like: {{ fragment.main.feels_like }}</li>
@@ -45,16 +48,27 @@ export default {
 <style scoped>
 span {
   display: block;
-  margin-left: 10px;
+  /* margin-left: 10px; */
 }
 span img {
   cursor: pointer;
 }
 .box-card >>> {
-  width: 150px;
   display: flex;
-  height: 220px;
-  margin-left: 5px;
-  margin-right: 5px;
+  overflow: hidden;
+  padding: 0;
+}
+.box-card .top {
+  background-color: #2d40dc;
+  padding: 10px;
+  color: #fff;
+}
+.box-card >>> .el-card__body {
+  padding: 0px;
+}
+.bottom {
+  background-color: rgb(6, 65, 37);
+  padding: 10px;
+  color: floralwhite;
 }
 </style>

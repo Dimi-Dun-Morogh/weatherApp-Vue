@@ -13,6 +13,7 @@
           type="primary"
           @click="onSubmit"
           icon="el-icon-search"
+          class="button"
         ></el-button>
       </el-form-item>
     </el-form>
@@ -49,5 +50,8 @@ span {
   display: block;
   font-family: "Italianno", cursive;
   font-size: 50px;
+}
+.button {
+  background-color: #2d40dc;
 }
 </style>

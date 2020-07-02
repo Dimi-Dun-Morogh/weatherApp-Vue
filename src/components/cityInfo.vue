@@ -1,9 +1,9 @@
 <template>
   <div v-show="isThereData">
     <ul>
-      <li>Country: {{ country }}</li>
-      <li>City: {{ City }}</li>
-      <li>Population: {{ population }}</li>
+      <li>Country: {{ this.city === null ? "" : this.city.country }}</li>
+      <li>City: {{ this.city === null ? "" : this.city.name }}</li>
+      <li>Population: {{ this.city === null ? "" : this.city.population }}</li>
       <li>Sunrise: {{ sunrise }}</li>
       <li>Sunset: {{ sunset }}</li>
     </ul>
@@ -14,31 +14,21 @@ import { mapGetters } from "vuex";
 import formatDate from "../filters/formatDate";
 export default {
   name: "cityInfo",
-  data: () => ({
-    country: "",
-    City: "",
-    population: "",
-    sunrise: "",
-    sunset: ""
-  }),
-  watch: {
-    isThereData: "fillInfo"
-  },
+  data: () => ({}),
+  watch: {},
   computed: {
     ...mapGetters("weatherData", ["city"]),
     isThereData() {
       return this.city === null ? false : true;
+    },
+    sunrise() {
+      return this.city === null ? false : formatDate(this.city.sunrise);
+    },
+    sunset() {
+      return this.city === null ? false : formatDate(this.city.sunset);
     }
   },
-  methods: {
-    fillInfo() {
-      this.country = this.city.country;
-      this.City = this.city.name;
-      this.population = this.city.population;
-      this.sunrise = formatDate(this.city.sunrise);
-      this.sunset = formatDate(this.city.sunset);
-    }
-  }
+  methods: {}
 };
 </script>
 <style scoped>
