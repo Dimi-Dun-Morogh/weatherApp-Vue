@@ -1,28 +1,52 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="wrap">
+      <el-card class="box-card">
+        <searchForm />
+        <cityInfo />
+        <weatherToday />
+        <weatherByDays />
+      </el-card>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import searchForm from "./components/searchForm.vue";
+import weatherToday from "./components/weatherToday.vue";
+import weatherByDays from "./components/weatherByDays.vue";
+import cityInfo from "./components/cityInfo.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld
+    searchForm,
+    weatherToday,
+    weatherByDays,
+    cityInfo
   }
 };
 </script>
 
 <style>
+body {
+  background-color: #367ab64d;
+  background-image: url("assets/bg.jpg");
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.el-card {
+  background-color: #fcfcfc !important;
 }
 </style>
