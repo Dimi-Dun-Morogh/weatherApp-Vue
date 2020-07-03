@@ -78,18 +78,20 @@ export default {
 </script>
 
 <style scoped>
-.box-card >>> {
+.box-card {
+  background-color: #064125;
   width: 150px;
 }
 span {
   display: block;
 }
 .img-block {
-  background-color: rgba(22, 13, 12, 0.1);
+  background-color: #9fcbf29e;
 }
 .box-card >>> .el-card__header {
   background-color: #2d40dc;
   color: #fff;
+  border: 0px;
 }
 .box-card >>> .el-card__body {
   padding: 0;

@@ -45,11 +45,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 600px;
 }
 .wrap {
   max-width: 960px;
 }
 .el-card {
-  background-color: #fcfcfc !important;
+  /* background-color: #fcfcfc !important; */
+}
+@media (max-width: 375px) {
+  .wrap {
+    max-width: 375px;
+  }
 }
 </style>

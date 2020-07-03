@@ -40,4 +40,9 @@ li {
 li + li {
   margin-left: 10px;
 }
+@media (max-width: 650px) {
+  ul {
+    padding-left: 0;
+  }
+}
 </style>

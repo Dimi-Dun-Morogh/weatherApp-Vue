@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="card-wrap">
     <el-card class="box-card">
       <span class="top">{{ fragment.time }}</span>
-      <span>
+      <span class="img-block">
         <el-tooltip :content="iconTooltip" placement="left-start">
           <img :src="weatherIcon" alt="icon" />
         </el-tooltip>
@@ -46,17 +46,26 @@ export default {
 </script>
 
 <style scoped>
+.card-wrap {
+  display: flex;
+}
 span {
   display: block;
   /* margin-left: 10px; */
+}
+.img-block {
+  background-color: #9fcbf29e;
 }
 span img {
   cursor: pointer;
 }
 .box-card >>> {
-  display: flex;
+  /* display: flex; */
   overflow: hidden;
   padding: 0;
+  width: 100px;
+  background-color: rgb(6, 65, 37);
+  border: 0px;
 }
 .box-card .top {
   background-color: #2d40dc;
@@ -67,7 +76,7 @@ span img {
   padding: 0px;
 }
 .bottom {
-  background-color: rgb(6, 65, 37);
+  /* background-color: rgb(6, 65, 37); */
   padding: 10px;
   color: floralwhite;
 }

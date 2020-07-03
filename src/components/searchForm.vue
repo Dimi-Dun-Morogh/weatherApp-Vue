@@ -6,15 +6,17 @@
         <el-input
           v-model="form.cityName"
           @keyup.enter.native="onSubmit"
+          class="search-input"
         ></el-input>
       </el-form-item>
-      <el-form-item>
+      <el-form-item class="button-item">
         <el-button
           type="primary"
           @click="onSubmit"
           icon="el-icon-search"
           class="button"
-        ></el-button>
+          >Search</el-button
+        >
       </el-form-item>
     </el-form>
   </div>
@@ -42,9 +44,6 @@ export default {
 </script>
 
 <style scoped>
-.wrap {
-  min-width: 400px;
-}
 span {
   margin-bottom: 10px;
   display: block;
@@ -53,5 +52,24 @@ span {
 }
 .button {
   background-color: #2d40dc;
+}
+@media (max-width: 460px) {
+  .search-input {
+    width: 200px;
+  }
+}
+@media (max-width: 414px) {
+  span {
+    font-size: 40px;
+  }
+  .wrap {
+    max-width: 360px;
+  }
+  .button-item {
+    margin-left: -22px;
+  }
+  .wrap >>> .el-form-item {
+    margin-bottom: 5px;
+  }
 }
 </style>

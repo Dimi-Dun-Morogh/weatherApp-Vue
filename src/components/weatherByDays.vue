@@ -26,5 +26,11 @@ export default {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
+  flex-wrap: wrap;
+}
+@media (max-width: 800px) {
+  .daysWrapper {
+    justify-content: center;
+  }
 }
 </style>

@@ -3,7 +3,11 @@
     <div class="weather-today" v-show="weatherDataToday">
       <span>Weather Today</span>
       <div class="container">
-        <div v-for="(fragment, index) in weatherDataToday" :key="index">
+        <div
+          v-for="(fragment, index) in weatherDataToday"
+          :key="index"
+          class="fragment-container"
+        >
           <weatherFragment :fragment="fragment" />
         </div>
       </div>
@@ -31,5 +35,16 @@ export default {
   margin-top: 10px;
   margin-bottom: 10px;
   flex-wrap: wrap;
+}
+.fragment-container {
+  /* flex-grow: 1; */
+  background-color: #064125;
+}
+@media (max-width: 650px) {
+  .container {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 </style>
