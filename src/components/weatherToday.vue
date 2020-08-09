@@ -36,9 +36,14 @@ export default {
   margin-bottom: 10px;
   flex-wrap: wrap;
 }
+span {
+  font-size: 23px;
+}
 .fragment-container {
   /* flex-grow: 1; */
   background-color: #064125;
+  background-color: #064125;
+  border: 1px solid rgba(255, 255, 255, 0.8);
 }
 @media (max-width: 650px) {
   .container {

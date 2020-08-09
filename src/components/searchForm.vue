@@ -2,7 +2,7 @@
   <div class="wrap">
     <span>Welcome to Weather App</span>
     <el-form :model="form" :inline="true" @submit.native.prevent>
-      <el-form-item label="City name">
+      <el-form-item class="inputLabel" label="City name">
         <el-input
           v-model="form.cityName"
           @keyup.enter.native="onSubmit"
@@ -53,22 +53,15 @@ span {
 .button {
   background-color: #2d40dc;
 }
-@media (max-width: 460px) {
-  .search-input {
-    width: 200px;
-  }
+.inputLabel {
+  font-weight: bold;
+  font-size: 17px;
 }
-@media (max-width: 414px) {
-  span {
-    font-size: 40px;
-  }
-  .wrap {
-    max-width: 360px;
-  }
-  .button-item {
-    margin-left: -22px;
-  }
-  .wrap >>> .el-form-item {
+@media (max-width: 469px) {
+  .inputLabel {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 5px;
   }
 }

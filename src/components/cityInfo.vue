@@ -1,5 +1,5 @@
 <template>
-  <div v-show="isThereData">
+  <div v-show="isThereData" class="cityInfoWrap">
     <ul>
       <li>Country: {{ this.city === null ? "" : this.city.country }}</li>
       <li>City: {{ this.city === null ? "" : this.city.name }}</li>
@@ -32,7 +32,14 @@ export default {
 };
 </script>
 <style scoped>
+.cityInfoWrap {
+  background-color: #ffffffa3;
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
 ul {
+  font-weight: bold;
 }
 li {
   display: inline;

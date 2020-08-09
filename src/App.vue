@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="wrap">
-      <el-card class="box-card">
+      <el-card class="box-card card-wrapper">
         <searchForm />
         <cityInfo />
         <weatherToday />
@@ -50,8 +50,9 @@ body {
 .wrap {
   max-width: 960px;
 }
-.el-card {
-  /* background-color: #fcfcfc !important; */
+.card-wrapper {
+  border: none !important;
+  background-color: rgba(255, 255, 255, 0.7) !important;
 }
 @media (max-width: 375px) {
   .wrap {

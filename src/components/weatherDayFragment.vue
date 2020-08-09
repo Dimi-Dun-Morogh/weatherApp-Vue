@@ -81,6 +81,7 @@ export default {
 .box-card {
   background-color: #064125;
   width: 150px;
+  border-color: rgba(255, 255, 255, 0.5);
 }
 span {
   display: block;

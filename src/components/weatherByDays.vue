@@ -1,6 +1,6 @@
 <template>
   <div v-show="weatherData">
-    Weather by Days
+    <span> Weather by Days</span>
     <div class="daysWrapper">
       <div v-for="(day, index) in weatherData" :key="index">
         <weatherDayFragment :dayFragment="day" />
@@ -27,6 +27,9 @@ export default {
   justify-content: space-between;
   margin-top: 10px;
   flex-wrap: wrap;
+}
+span {
+  font-size: 23px;
 }
 @media (max-width: 800px) {
   .daysWrapper {
